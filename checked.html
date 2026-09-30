@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Category Popup</title>
+  <!-- Bootstrap 3 + AdminLTE CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@2.4.18/dist/css/AdminLTE.min.css">
+</head>
+<body>
+
+<!-- Button to open popup -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#categoryModal">
+  Add Category
+</button>
+
+<!-- Popup -->
+<div class="modal fade" id="categoryModal" tabindex="-1">
+  <div class="modal-dialog" style="width:40%;">
+    <div class="modal-content">
+
+      <!-- यहाँ आपका Box -->
+      <div class="box box-primary" style="margin:0;">
+        <div class="box-header with-border">
+          <h3 class="box-title">Add Category</h3>
+        </div>
+
+        <form action="" method="POST">
+          <div class="box-body">
+            <div class="form-group">
+              <label>Category</label>
+              <input type="text" class="form-control" name="category" placeholder="Enter your name" required>
+            </div>
+          </div>
+          <div class="box-footer text-center">
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <!-- Box End -->
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

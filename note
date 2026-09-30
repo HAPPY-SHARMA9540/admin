@@ -1,0 +1,22 @@
+       <?php
+                    $sql="SELECT * FROM text";
+                    $n=1;
+                    $result= $connection->query($sql);
+                    if($result->num_rows>0){
+                         while($num=$result->fetch_assoc()){
+                               echo "<tr>";
+                                 echo "<td>".$n."</td>";
+                                  echo "<td>".$num['title']."</td>";
+                                  echo "<td>".$num['name']."</td>";
+                                  echo "<td>".$num['number']."</td>";
+                                  echo "<td>".$num['email']."</td>";
+                                  echo "<td>".$num['address']."</td>";
+                                  echo "<td><a href='edit.php?user_id={$num['id']}' class='btn btn-success'>Edit</a>  <a href='delete.php?id={}' class='btn btn-danger'>Delete</a></td>";
+                               echo "</tr>";
+                               $n++;
+                         }
+                    }
+                    else{
+                        echo "table is empty";
+                    }
+                  ?>
